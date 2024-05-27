@@ -18,11 +18,24 @@ jobs:
         with:
           node-version: 20
 
+      - name: Install Yarn
+        run: npm install -g yarn
+
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.npm
+            ~/.cache/yarn
+          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
       - name: Install dependencies
         run: yarn
 
       - name: Build project
-        run: yarn build
+        run: yarn build --verbose
 
       - name: Deploy to remote server
         uses: burnett01/rsync-deployments@5.2.1
