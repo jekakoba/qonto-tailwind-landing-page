@@ -31,7 +31,7 @@
 
 	// Відкриваємо меню
 	.menu-open .menu {
-		@apply translate-x-0;
+		@apply translate-x-0 transition-transform duration-300 ease-linear;
 	}
 
 	// Іконка меню
@@ -41,7 +41,7 @@
 	.icon-menu span,
 	.icon-menu::before,
 	.icon-menu::after {
-		@apply content-[''] absolute right-0 bg-white w-full h-[2px];
+		@apply content-[''] absolute right-0 bg-white w-full h-[2px] transition-all duration-300 ease-linear;
 	}
 
 	.icon-menu::before {
@@ -69,6 +69,11 @@
 	// Кнопки
 	.button {
 		@apply text-black-light bg-white text-xs leading-tight 
-		py-3 px-6 inline-flex items-center justify-center text-center rounded tablet:text-[15px];
+		py-3 px-6 inline-flex items-center justify-center text-center rounded tablet:text-[15px] hover:bg-yellow  transition-colors duration-300 ease-linear;
+	}
+
+	// Ховери
+	.hover-link {
+		@apply hover:text-yellow transition-colors duration-300 ease-linear;
 	}
 }

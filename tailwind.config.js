@@ -49,9 +49,29 @@ if (mainParams.IS_TAILWIND) {
 					'medium': 500,
 					'bold': 700,
 				},
+
+				// Transitions
 				transition: {
-					'color': 'color 0.3s ease',
-					'opacity': 'opacity 0.3s ease',
+					'color': 'color',
+					'opacity': 'opacity',
+					'tansform': 'tansform',
+				},
+				transitionDuration: {
+					'3': '300ms',
+					'6': '600ms',
+					'1': '1000ms',
+				},
+				transitionDelay: {
+					'3': '300ms',
+					'6': '600ms',
+					'1': '1000ms',
+				},
+				TransitionTimingFunction: {
+					'ease': 'ease',
+					'ease-in': 'ease-in',
+					'ease-out': 'ease-out',
+					'ease-in-out': 'ease-in-out',
+					'linear': 'linear',
 				}
 			},
 		},
