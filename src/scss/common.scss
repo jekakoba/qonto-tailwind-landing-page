@@ -1,0 +1,30 @@
+body {
+   // The scroll is blocked
+   .lock & {
+      overflow: hidden;
+      touch-action: none;
+      overscroll-behavior: none;
+   }
+   // The site is downloaded
+   .loaded & {
+   }
+}
+.wrapper {
+   min-height: 100%;
+   display: flex;
+   flex-direction: column;
+   overflow: hidden;
+   @supports (overflow: clip) {
+      overflow: clip;
+   }
+   // We press Footer
+   > main {
+      flex: 1 1 auto;
+   }
+   // Fix for sliders
+   > * {
+      min-width: 0;
+   }
+}
+
+//========================================================================================================================================================

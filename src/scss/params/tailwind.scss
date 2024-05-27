@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	// Шапка
+	.header {
+		@apply fixed top-0 left-0 w-full bg-black-light;
+	}
+	.menu-link {
+		@apply text-white font-light text-[17px] mobileMax:text-2xl;
+	}
+	.menu-list {
+		@apply flex flex-wrap flex-col gap-y-6 items-end  tablet:flex-row tablet:gap-x-5 tablet:gap-y-1;
+	}
+	.menu-body {
+		@screen mobileMax {
+			@apply pt-20 pb-8 pl-4 pr-4 h-full overflow-y-auto relative bg-black-light;
+		}
+	}
+	.menu-body::before {
+		@screen mobileMax {
+			@apply content-[''] fixed top-0 left-0 w-full bg-black-light min-h-14;
+		}
+	}
+	.menu {
+		@screen mobileMax {
+			@apply fixed top-0 left-0 translate-x-full w-full h-full overflow-hidden;
+		}
+	}
+
+	// Відкриваємо меню
+	.menu-open .menu {
+		@apply translate-x-0;
+	}
+
+	// Іконка меню
+	.icon-menu {
+		@apply block relative w-[30px] h-[18px] cursor-pointer z-10 tablet:hidden;
+	}
+	.icon-menu span,
+	.icon-menu::before,
+	.icon-menu::after {
+		@apply content-[''] absolute right-0 bg-white w-full h-[2px];
+	}
+
+	.icon-menu::before {
+		@apply top-0;
+	}
+	.icon-menu::after {
+		@apply bottom-0;
+	}
+
+	.icon-menu span {
+		@apply top-[calc(50%-1px)];
+	}
+
+	// Ікона при відкритті меню
+	.menu-open .icon-menu span {
+		@apply w-0;
+	}
+	.menu-open .icon-menu::before {
+		@apply -rotate-45 top-[calc(50%-1px)];
+	}
+	.menu-open .icon-menu::after {
+		@apply rotate-45 bottom-[calc(50%-1px)];
+	}
+
+	// Кнопки
+	.button {
+		@apply text-black-light bg-white text-xs leading-tight 
+		py-3 px-6 inline-flex items-center justify-center text-center rounded tablet:text-[15px];
+	}
+}

@@ -1,0 +1,41 @@
+// RESET ================
+
+// Global Settings! =====
+// The width of the canvas (layout)
+$maxWidth: 1920;
+// The width of the restrictive container
+$maxWidthContainer: 1290; // (0 = no restriction)
+// General indentation from a container
+$containerPadding: 30; // (30 = 15px left and right, 0 = no retreat)
+// Mixins
+@import "base/mixins";
+// Fonts
+$fontFamily: "Inter", sans-serif;
+$fontSize: toRem(14);
+$minWidth: 320;
+// Breikpoints
+$tablet: em(991.98); // tablets, some phones in horizontal position
+$mobile: em(767.98); // phones l
+$mobileSmall: em(479.98); // phones with
+// Reset styles
+@import "../base/null";
+
+// ====================================================================
+// ====================================================================
+// ====================================================================
+
+$containerWidth: $maxWidthContainer + $containerPadding;
+[class*="__container"] {
+   @if ($maxWidthContainer>0) {
+      max-width: toRem($containerWidth);
+      margin: 0 auto;
+   }
+   @if ($containerPadding>0) {
+      @if ($maxWidthContainer>0) {
+         padding: 0 toRem(math.div($containerPadding, 2));
+      } @else {
+         @include adaptiveValue("padding-left", math.div($containerPadding, 2), 15);
+         @include adaptiveValue("padding-right", math.div($containerPadding, 2), 15);
+      }
+   }
+}

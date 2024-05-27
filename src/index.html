@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+@@include('src/components/global/_head.html', { "title": 'Home page' })
+
+<body>
+	<div class="wrapper">
+		<!-- Header -->
+		@@include('src/components/global/header/_header.html', {})
+		<main class="page">
+			<!-- Content start -->
+
+			<!-- Content end -->
+		</main>
+		<!-- Footer -->
+		@@include('src/components/global/footer/_footer.html', {})
+	</div>
+	<!-- Scripts js -->
+	<script>
+		function menuInit() {
+			document.documentElement.classList.toggle("menu-open");
+		}
+		document.addEventListener("click", function (e) {
+			if (!e.target.closest('.icon-menu') && document.documentElement.classList.contains("menu-open")) {
+				document.documentElement.classList.remove("menu-open");
+			}
+		});
+
+	</script>
+
+	@@include('src/components/global/_scripts.html', {})
+</body>
+
+</html>
