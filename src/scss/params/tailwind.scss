@@ -36,7 +36,7 @@
 
 	// Іконка меню
 	.icon-menu {
-		@apply block relative w-[30px] h-[18px] cursor-pointer z-10 tablet:hidden;
+		@apply block relative w-[30px] h-[18px] cursor-pointer z-20 tablet:hidden;
 	}
 	.icon-menu span,
 	.icon-menu::before,

@@ -18,14 +18,14 @@
 	<!-- Scripts js -->
 	<script>
 		function menuInit() {
-			document.documentElement.classList.toggle("menu-open");
+			document.addEventListener("click", function (e) {
+				const target = e.target;
+				if (target.closest('.icon-menu')) {
+					document.documentElement.classList.toggle("menu-open");
+				}
+			});
 		}
-		document.addEventListener("click", function (e) {
-			if (!e.target.closest('.icon-menu') && document.documentElement.classList.contains("menu-open")) {
-				document.documentElement.classList.remove("menu-open");
-			}
-		});
-
+		menuInit()
 	</script>
 
 	@@include('src/components/global/_scripts.html', {})
