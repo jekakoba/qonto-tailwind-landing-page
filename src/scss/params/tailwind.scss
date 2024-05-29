@@ -3,9 +3,34 @@
 @tailwind utilities;
 
 @layer components {
+	body {
+		@apply text-sm tablet:text-[17px] leading-normal text-black-dark;
+	}
+
+	.wrapper {
+		@apply min-h-full flex flex-col overflow-hidden;
+		@supports (overflow: clip) {
+			.overflow-clip {
+				overflow: clip;
+			}
+		}
+	}
+	.page {
+		@apply flex-1;
+	}
+	//========================================================================================================================================================
+	// Картинки
+	.ibg {
+		@apply relative;
+	}
+	.ibg img {
+		@apply absolute top-0 left-0 w-full h-full object-cover;
+	}
+	//========================================================================================================================================================
+
 	// Шапка
 	.header {
-		@apply fixed top-0 left-0 w-full bg-black-light;
+		@apply fixed top-0 left-0 w-full bg-black-light border-b border-white z-[99];
 	}
 	.menu-link {
 		@apply text-white font-light text-[17px] mobileMax:text-2xl;
@@ -70,6 +95,22 @@
 	.button {
 		@apply text-black-light bg-white text-xs leading-tight 
 		py-3 px-6 inline-flex items-center justify-center text-center rounded tablet:text-[15px] hover:bg-yellow  transition-colors duration-300 ease-linear;
+	}
+	.custom-dimensions {
+		width: 30vw;
+		height: 30vh;
+	}
+
+	// Заголовки
+
+	.h1 {
+		@apply text-4xl mobile:text-5xl tablet:text-[52px] text-white leading-tight;
+	}
+	.h2 {
+		@apply text-xl mobile:text-3xl tablet:text-[38px] text-black-dark leading-tight;
+	}
+	.h3 {
+		@apply text-sm tablet:text-base laptop:text-[23px] text-black-light leading-snug;
 	}
 
 	// Ховери

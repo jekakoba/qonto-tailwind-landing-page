@@ -1,21 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Head -->
 @@include('src/components/global/_head.html', { "title": 'Home page' })
 
 <body>
 	<div class="wrapper">
-		<!-- Header -->
 		@@include('src/components/global/header/_header.html', {})
 		<main class="page">
-			<!-- Content start -->
-
-			<!-- Content end -->
+			<section class="pb-36 tablet:pb-[400px] bg-black-light">
+				<div class="container  gap-5 grid tablet:grid-cols-[450px_1fr] items-center">
+					<div class="pt-24 mobile:pt-32">
+						<h1 class="h1 mb-4 tablet:mb-8">The account that means business</h1>
+						<p class="text-white mb-4 tablet:mb-8 font-light">Pay, get paid, invoice, bookkeep, manage expenses & oversee cash flow. All online in one smart app.</p>
+						<a href="#" class="button mb-4  tablet:mb-4">Discover our offers</a>
+						<p class="text-[10px] mobile:text-[13px] text-gray font-light">From €9/month excl. VAT. Try it free for 30 days with no obligations.</p>
+					</div>
+					<div class="relative pb-[68%]  tablet:pb-[92%] tablet:translate-x-[20%] tablet:-translate-y-[5%]">
+						<img class="absolute  top-0 left-0 max-w-[100%] tablet:max-w-[150%] h-full object-cover" src="@img/hero-image.png" alt="hero image">
+					</div>
+				</div>
+			</section>
+			<section class="-mt-28 mb-12 tablet:-mt-[340px] mobile:mb-20 tablet:mb-24">
+				<div class="container overflow-x-auto pb-2  flex laptop:grid laptop:grid-cols-4 laptop:gap-[20px]">
+					<article class="bg-white rounded-md mr-4 border border-black-light flex flex-col flex-[0_0_95%] mobile:flex-[0_0_45%] laptop:mr-0">
+						<div class="p-4 bg-purple rounded-t">
+							<h3 class="text-xl tablet:text-2xl text-black-light leading-snug">The Business <br> Account</h3>
+						</div>
+						<p class="font-light py-4 tablet:py-6 px-4 flex-1">
+							The account that’s powerful to the core. Day-to-day banking, from local IBANs to free Mastercards & instant payments, all included in your plan.
+						</p>
+						<div class="pb-6 px-4 self-center">
+							<img src="@img/advantage/01.svg" alt="The Business Account">
+						</div>
+					</article>
+					<article class="bg-white rounded-md mr-4 border border-black-light flex flex-col flex-[0_0_95%]  mobile:flex-[0_0_45%] laptop:mr-0">
+						<div class="p-4 bg-purple rounded-t">
+							<h3 class="text-xl tablet:text-2xl text-black-light leading-snug">Invoice <br> Management</h3>
+						</div>
+						<p class="font-light py-4 tablet:py-6 px-4 flex-1">
+							Centralize invoices & receipts in one place, get paid faster & automate your outgoing payments.
+						</p>
+						<div class="pb-6 px-4 self-center">
+							<img src="@img/advantage/02.svg" alt="Invoice Management">
+						</div>
+					</article>
+					<article class="bg-white rounded-md mr-4 border border-black-light flex flex-col flex-[0_0_95%]  mobile:flex-[0_0_45%] laptop:mr-0">
+						<div class="p-4 bg-purple rounded-t">
+							<h3 class="text-xl tablet:text-2xl text-black-light leading-snug">Expense & Spend <br> Management</h3>
+						</div>
+						<p class="font-light py-4 tablet:py-6 px-4 flex-1">
+							Control team spending with budgets, automatic receipt collection & tailored access.
+						</p>
+						<div class="pb-6 px-4 self-center">
+							<img src="@img/advantage/03.svg" alt="Expense & Spend Management">
+						</div>
+					</article>
+					<article class="bg-white rounded-md  border border-black-light flex flex-col flex-[0_0_95%]  mobile:flex-[0_0_45%]">
+						<div class="p-4 bg-purple rounded-t">
+							<h3 class="text-xl tablet:text-2xl text-black-light leading-snug">Bookkeeping & <br> Cash Flow</h3>
+						</div>
+						<p class="font-light py-4 tablet:py-6 px-4 flex-1">
+							Collaborate with your accountant, share tools & get a full, real-time cash flow overview.
+						</p>
+						<div class="pb-6 px-4 self-center">
+							<img src="@img/advantage/04.svg" alt="Bookkeeping & Cash Flow">
+						</div>
+					</article>
+				</div>
+			</section>
+			<div class="mb-20">
+				<div class="container flex flex-col gap-4 mobile:gap-8 tablet:flex-row tablet:justify-between tablet:gap-4">
+					<p class="text-xl mobile:text-2xl text-black-dark tablet:pt-4">Loved & trusted. 450,000 times and counting.</p>
+					<ul class="grid grid-cols-3 gap-4 tablet:gap-16">
+						<li class="flex flex-col items-center justify-center text-center">
+							<div class="flex gap-2 items-center mb-3">
+								<div class="text-2xl text-black-dark">4.8</div>
+								<div class="w-[20px]">
+									<img src="@img/icons/star.svg" alt="star">
+								</div>
+							</div>
+							<div class="flex gap-1 items-center">
+								<div class="w-4">
+									<img src="@img/icons/app-store.svg" alt="app-store">
+								</div>
+								<p class="font-light text-[10px] mobile:text-[13px]">on App Store</p>
+							</div>
+						</li>
+						<li class="flex flex-col items-center justify-center text-center">
+							<div class="flex gap-2 items-center mb-3">
+								<div class="text-2xl text-black-dark">4.7</div>
+								<div class="w-[20px]">
+									<img src="@img/icons/star.svg" alt="star">
+								</div>
+							</div>
+							<div class="flex gap-1 items-center">
+								<div class="w-4">
+									<img src="@img/icons/play-store.svg" alt="play-store">
+								</div>
+								<p class="font-light text-[10px] mobile:text-[13px]">on Play Store</p>
+							</div>
+						</li>
+						<li class="flex flex-col items-center justify-center text-center">
+							<div class="flex gap-2 items-center mb-3">
+								<div class="text-2xl text-black-dark">4.7</div>
+								<div class="w-[20px]">
+									<img src="@img/icons/star.svg" alt="star">
+								</div>
+							</div>
+							<div class="flex gap-1 items-center">
+								<div class="w-4">
+									<img src="@img/icons/trustpilot.svg" alt="trustpilot">
+								</div>
+								<p class="font-light text-[10px] mobile:text-[13px]">on App Store</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<section class="mb-8 laptop:mb-14">
+				<div class="container flex flex-col">
+					<h2 class="h2 text-center mb-8 tablet:mb-16">Whatever your size, sector or stage of growth</h2>
+					<div>
+						<div class="mb-4 mobile:mb-8 laptop:mb-14 flex overflow-x-auto pb-2 pr-4 -mr-4 laptop:pb-0 laptop:pr-0 laptop:grid laptop:grid-cols-3 laptop:gap-6">
+							<article class="flex-[0_0_95%] mr-2 flex-shrink-0 rounded-md flex flex-col overflow-hidden mobile:mr-4 mobile:flex-[0_0_45%]  laptop:row-span-2 laptop:mr-0">
+								<a class="pb-[50%] ibg  laptop:pb-[133%]" href="#">
+									<img class="object-top" src="@img/services/01.jpg" alt="Company Creators">
+								</a>
+								<div class="p-4 tablet:py-6 px-4 bg-black-light flex-1">
+									<h3 class="h3 text-white mb-2">
+										<a class="flex gap-2 items-center" href="#">Company Creators<i class="_icon-arrow"></i></a>
+									</h3>
+									<p class="text-white text-xs tablet:text-sm">
+										Open an account and deposit your initial share efficiency matters.
+										capital. All at once. All online.
+									</p>
+								</div>
+							</article>
+							<article class="flex-[0_0_95%] mr-2 flex-shrink-0 rounded-md flex flex-col overflow-hidden mobile:flex-[0_0_45%] laptop:col-span-1 laptop:mr-0">
+								<a class="pb-[50%] ibg laptop:pb-[46%]" href="#">
+									<img class="object-top" src="@img/services/02.jpg" alt="Self-employed ">
+								</a>
+								<div class="p-4 tablet:py-6 tablet:px-4 bg-purple flex-1">
+									<h3 class="h3 mb-2">
+										<a class="flex gap-2 items-center" href="#">Self-employed <i class="_icon-arrow"></i></a>
+									</h3>
+									<p class="text-xs tablet:text-sm">
+										For freelancers and sole proprietors. Because when you fly solo, efficiency matters.
+									</p>
+								</div>
+							</article>
+							<article class="flex-[0_0_95%] mr-2 flex-shrink-0 rounded-md flex flex-col overflow-hidden  mobile:mr-4 mobile:flex-[0_0_45%] laptop:col-span-1 laptop:mr-0">
+								<a class="pb-[50%] ibg laptop:pb-[46%]" href="#">
+									<img class="object-top" src="@img/services/03.jpg" alt="Self-employed ">
+								</a>
+								<div class="p-4 tablet:py-6 tablet:px-4 bg-green flex-1">
+									<h3 class="h3 mb-2">
+										<a class="flex gap-2 items-center" href="#">Self-employed <i class="_icon-arrow"></i></a>
+									</h3>
+									<p class="text-xs tablet:text-sm">
+										For freelancers and sole proprietors. Because when you fly solo, efficiency matters.
+									</p>
+								</div>
+							</article>
+							<article class="flex-[0_0_95%] mr-2 flex-shrink-0 rounded-md flex flex-col overflow-hidden mobile:mr-4 mobile:flex-[0_0_45%] laptop:col-span-1 laptop:mr-0">
+								<a class="pb-[50%] ibg laptop:pb-[46%]" href="#">
+									<img class="object-top" src="@img/services/04.jpg" alt="Self-employed ">
+								</a>
+								<div class="p-4 tablet:py-6 tablet:px-4 bg-yellow flex-1">
+									<h3 class="h3 mb-2">
+										<a class="flex gap-2 items-center" href="#">Self-employed <i class="_icon-arrow"></i></a>
+									</h3>
+									<p class="text-xs tablet:text-sm">
+										For freelancers and sole proprietors. Because when you fly solo, efficiency matters.
+									</p>
+								</div>
+							</article>
+							<article class="flex-shrink-0 flex-[0_0_95%] rounded-md flex flex-col overflow-hidden mobile:flex-[0_0_45%] labptop:col-span-1">
+								<a class="pb-[50%] ibg laptop:pb-[46%]" href="#">
+									<img class="object-top" src="@img/services/05.jpg" alt="Self-employed ">
+								</a>
+								<div class="p-4 tablet:py-6 tablet:px-4 bg-orange flex-1">
+									<h3 class="h3 mb-2">
+										<a class="flex gap-2 items-center" href="#">Self-employed <i class="_icon-arrow"></i></a>
+									</h3>
+									<p class="text-xs tablet:text-sm">
+										For freelancers and sole proprietors. Because when you fly solo, efficiency matters.
+									</p>
+								</div>
+							</article>
+						</div>
+					</div>
+					<a href="#" class="button self-center bg-black-dark text-white  hover:text-black-dark">Get started</a>
+			</section>
+			<div class="bg-black-light relative  mb-8 tablet:mb-20 overflow-hidden">
+				<div class="container  min-h-screen flex flex-col items-center justify-center">
+					<a href="#" class="button bg-transparent text-white border-white border hover:text-black-dark">Discover our cards
+					</a>
+				</div>
+				<div class="absolute bottom-0 left-0 w-3/6 h-2/6">
+					<img class="absolute bottom-0 left-0 object-bottom" src="@img/decors/card-left.png" alt="">
+				</div>
+				<div class="absolute top-0 right-0 w-5/6 h-5/6">
+					<img class="absolute top-0 right-0 object-bottom" src="@img/decors/card-right-top.png" alt="">
+				</div>
+				<div class="absolute bottom-0 right-0 w-3/6 h-2/6">
+					<img class="absolute bottom-0 right-0 object-bottom" src="@img/decors/card-right-bottom.png" alt="">
+				</div>
+			</div>
 		</main>
-		<!-- Footer -->
 		@@include('src/components/global/footer/_footer.html', {})
 	</div>
-	<!-- Scripts js -->
 	<script>
 		function menuInit() {
 			document.addEventListener("click", function (e) {
@@ -27,7 +220,6 @@
 		}
 		menuInit()
 	</script>
-
 	@@include('src/components/global/_scripts.html', {})
 </body>
 

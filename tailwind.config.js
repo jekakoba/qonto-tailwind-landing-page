@@ -19,6 +19,13 @@ if (mainParams.IS_TAILWIND) {
 		darkMode: "class",
 		theme: {
 			extend: {
+				container: {
+					center: true,
+					padding: '1rem',
+					screens: {
+						DEFAULT: "75rem",
+					},
+				},
 				colors: {
 					transparent: 'transparent',
 					current: 'currentColor',
@@ -31,6 +38,7 @@ if (mainParams.IS_TAILWIND) {
 					'yellow': '#F4F8AC',
 					'green': '#DFF9F0',
 					'orange': '#FFEADD',
+					'gray': '#B8B8B5',
 				},
 				screens: {
 					'mobileSmall': '320px',
@@ -72,7 +80,9 @@ if (mainParams.IS_TAILWIND) {
 					'ease-out': 'ease-out',
 					'ease-in-out': 'ease-in-out',
 					'linear': 'linear',
-				}
+				},
+
+
 			},
 		},
 		plugins: plugins,
